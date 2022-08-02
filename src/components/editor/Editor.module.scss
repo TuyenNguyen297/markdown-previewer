@@ -1,0 +1,25 @@
+@import "../../partials_styles/mixin.scss";
+@import "../../partials_styles/variables";
+
+#editor-section {
+    @include box-shadow(10px, 1px);
+    border-radius: 3px;
+    background-color: pink;
+    textarea {
+        @include default-screen {
+            resize: vertical;
+            padding: 1rem;
+            font-size: 1.5rem;
+            font-weight: 300;
+            border-radius: 3px;
+            @include width(400px,600px){
+                width:50vw;
+            };
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+

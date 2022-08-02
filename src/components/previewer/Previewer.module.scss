@@ -1,0 +1,24 @@
+@import "../../partials_styles/mixin.scss";
+@import "../../partials_styles/variables.scss";
+
+#section-previewer {
+    @include box-shadow(10px, 1px);
+    border-radius: 3px;
+    //height: fit-content;
+    background-color: pink;
+    [id="preview"] {
+        @include default-screen {
+            word-wrap: break-word;
+            padding: 3rem 2rem;
+            border-radius: 0px 0px 3px 3px;
+            font-size: 30px;
+            @include width(450px,800px){
+                width:50vw;
+            };
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@mixin width($min, $max) {
+    min-width: $min;
+    max-width: $max;
+    @content;
+}
+
+@mixin background-color($c, $o) {
+    background-color: rgba($c, $o);
+}
+
+@mixin box-shadow($spreading, $blur) {
+    box-shadow: 0px 0px $spreading $blur rgba(74, 74, 74, 0.586);
+}
+
+@mixin default-screen {
+    display: block;
+    height: 245px;
+    border: none;
+    @include background-color(white, 0.4);
+    @content;
+}

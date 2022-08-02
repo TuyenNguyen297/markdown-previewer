@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Editor from "./components/editor/Editor";
+import Previewer from "./components/previewer/Previewer";
+import { useState, useCallback } from "react";
 
 function App() {
+  const [expand, setExpand] = useState({ editor: false, previewer: false });
+  const handleClick = useCallback((component) => {
+    console.log(component);
+    setExpand(component);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <article className="App">
+      <Editor handleClick={handleClick} expand={expand} title="editor" />
+      <Previewer handleClick={handleClick} expand={expand} title="previewer" />
+    </article>
   );
 }
 

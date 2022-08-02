@@ -1,0 +1,53 @@
+@import "../../partials_styles/variables";
+@import "../../partials_styles/mixin";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Encode Sans Semi Condensed", sans-serif;
+  border: none;
+  font-size: 1.3rem;
+  height: 3.5rem;
+  padding: 0 2rem;
+  border-radius: 3px 3px 0px 0px;
+  @include background-color($main-color, 0.8);
+  #title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    & > :first-child {
+      font-size: 2.5rem;
+      bottom: 0px;
+    }
+    label {
+      font-size: 1.8rem;
+      padding-bottom:2px;
+    }
+  }
+  button {
+    background-color: transparent;
+    border: none;
+  }
+  .icon {
+    font-size: 1.8rem;
+    &:not([id="fcc-icon"]) {
+      position: relative;
+      bottom:-2px;
+      cursor: pointer;
+      &:hover {
+        color: rgb(191, 221, 56);
+      }
+    }
+  }
+}
+
+.editor {
+  box-shadow: inset 0px -2px 7px 0px rgba(74, 74, 74, 0.586);
+}
+.previewer {
+  box-shadow: 0px 3px 7px 0px rgba(74, 74, 74, 0.586);
+}
+
