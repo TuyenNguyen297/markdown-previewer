@@ -1,24 +1,72 @@
 @import "../../partials_styles/mixin.scss";
 @import "../../partials_styles/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 #section-previewer {
-    @include box-shadow(10px, 1px);
-    border-radius: 3px;
-    //height: fit-content;
-    background-color: pink;
+  @include box-shadow(10px, 1px);
+  border-radius: 3px;
+  @media (max-width: 992px) {
     [id="preview"] {
-        @include default-screen {
-            word-wrap: break-word;
-            padding: 3rem 2rem;
-            border-radius: 0px 0px 3px 3px;
-            font-size: 30px;
-            @include width(450px,800px){
-                width:50vw;
-            };
-        }
-
-        &:focus {
-            outline: none;
-        }
+      width: 90vw;
     }
+  }
+}
+
+[id="preview"] {
+  @include width(450px, 900px);
+  @include default-screen {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    padding: 3rem 2rem;
+    border-radius: 0px 0px 3px 3px;
+    font-family: "Raleway", sans-serif;
+    word-wrap: word-break;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 2rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+    padding-bottom: 2px;
+    border-bottom: 2px solid black;
+  }
+  h2 {
+    font-size: 2.6rem;
+    padding-bottom: 2px;
+    border-bottom: 1px solid black;
+  }
+  pre {
+    display: block;
+    background-color: white;
+    padding: 0.5rem;
+  }
+  p {
+    code {
+      background-color: white;
+      padding: 5px;
+    }
+  }
+  blockquote {
+    padding: 5px;
+    border-left: 5px solid #444;
+    margin-left: 2rem;
+  }
+  table {
+    text-align: left;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  ul,ol{
+    line-height:1.6;
+    margin-left:1.8rem;
+  }
+  img {
+    width: 80%;
+    display:block;
+    margin:0 auto;
+  }
 }
