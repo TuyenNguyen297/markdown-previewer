@@ -2,7 +2,9 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tuyennguyen297.github.io/markdown-previewer/",
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "marked": "^4.0.18",
     "prismjs": "^1.28.0",
     "react": "^18.2.0",
@@ -38,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   }
 }
